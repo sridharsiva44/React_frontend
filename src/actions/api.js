@@ -1,8 +1,8 @@
 import axios from "axios";
 
-const baseUrl = "http://74.249.89.180:5555/api/"
+//const baseUrl = "http://74.249.89.180:5555/api/"
 
-// const baseUrl = $dot.Net_back_end_Url
+ const baseUrl = $Dot.Net_back_end_Url
 
 
 export default {
