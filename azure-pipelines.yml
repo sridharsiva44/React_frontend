@@ -8,27 +8,28 @@ trigger:
 
 pool:
   vmImage: ubuntu-latest
+variables:
+- group: back_end_url_details
+
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
 - task: replacetokens@6
+  displayName: replace
   inputs:
     root: '$(System.DefaultWorkingDirectory)'
     sources: '**/api.js'
 - task: Npm@1
+  displayName: npm 
   inputs:
     command: 'install'
 - task: Npm@1
+  displayName: build
   inputs:
     command: 'custom'
     customCommand: 'run build'
 - task: PublishBuildArtifacts@1
+  displayName: publish
   inputs:
     PathtoPublish: 'build'
     ArtifactName: 'drop'
