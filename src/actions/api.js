@@ -4,7 +4,7 @@ import axios from "axios";
 
 // const baseUrl = "#{backendurl}#";
   
-  const baseUrl: process.env.BACKEND_API_URL
+  const baseUrl = process.env.baseUrl
 
 export default {
 
