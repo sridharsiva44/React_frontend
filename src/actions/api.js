@@ -1,6 +1,6 @@
 import axios from "axios";
 
-//const baseUrl = "http://74.249.89.180:5555/api/"
+// const baseUrl = "http://74.249.89.180:5555/api/"
 // below code is used to get or replace the value using replace token method in azure devops pipeline
 // const baseUrl = "#{backendurl}#";
   
